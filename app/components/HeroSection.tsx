@@ -1,35 +1,29 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  MapPin,
-  Calendar,
-  Users,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import Image from "next/image";
+import Image1 from "@/public/images/herosection/photo-1469474968028-56623f02e42e.avif";
+import Image2 from "@/public/images/herosection/photo-1488646953014-85cb44e25828.avif";
+import Image3 from "@/public/images/herosection/photo-1506905925346-21bda4d32df4.avif";
 
 const slides = [
   {
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: Image1,
     title: "Explore the World with Arif Tour and Travel",
     subtitle:
       "Create unforgettable memories with our expertly crafted tour packages",
     location: "Discover Amazing Destinations",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: Image2,
     title: "Domestic Adventures Await",
     subtitle:
       "Explore the beauty of India with our carefully planned domestic packages",
     location: "From Kerala to Kashmir",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: Image3,
     title: "International Escapes",
     subtitle: "Discover the world beyond with our international tour packages",
     location: "Dubai, Thailand, Singapore & More",
@@ -38,6 +32,11 @@ const slides = [
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -53,28 +52,31 @@ export default function HeroSection() {
   const whatsappUrl =
     "https://wa.me/919305396179?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
 
+  if (!isLoaded) return null;
+
   return (
-    <section id="home" className="relative h-screen">
+    <section id="home" className="relative w-full h-screen overflow-hidden">
       {/* Background Slides */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 w-full h-full">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
+            className={`absolute z-30 inset-0 w-full h-full transition-opacity duration-1000 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
             aria-hidden={index !== currentSlide}
           >
             <Image
-              src={slide.image || "/placeholder.svg"}
+              src={slide.image}
               alt={slide.title}
               fill
               sizes="100vw"
               priority={index === 0}
-              className="object-cover"
+              quality={85}
+              className="object-cover w-full h-full z-30"
             />
-            {/* Optional dark overlay for text contrast */}
-            <div className="absolute inset-0 bg-black/40" />
+            {/* Dark overlay for text contrast */}
+            <div className="absolute inset-0 bg-black/40 z-40" />
           </div>
         ))}
       </div>
@@ -96,7 +98,7 @@ export default function HeroSection() {
       </button>
 
       {/* Foreground Content */}
-      <div className="relative z-10 flex items-center justify-center h-full">
+      <div className="absolute inset-0 z-50 flex items-center justify-center">
         <div className="text-center text-white px-4 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 font-heading text-balance">
             {slides[currentSlide].title}
@@ -141,40 +143,6 @@ export default function HeroSection() {
             }`}
           />
         ))}
-      </div>
-
-      {/* Quick Search Bar */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-full max-w-4xl px-4 z-20">
-        <div className="bg-white rounded-lg shadow-xl p-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="relative">
-              <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="Where to?"
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
-            <div className="relative">
-              <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="date"
-                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-              />
-            </div>
-            <div className="relative">
-              <Users className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <select className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
-                <option>Guests</option>
-                <option>1 Guest</option>
-                <option>2 Guests</option>
-                <option>3 Guests</option>
-                <option>4+ Guests</option>
-              </select>
-            </div>
-            <button className="btn-primary w-full py-3">Search Packages</button>
-          </div>
-        </div>
       </div>
     </section>
   );
