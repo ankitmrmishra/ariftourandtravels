@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
+import Image from "next/image";
 
 const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -82,9 +83,9 @@ const TestimonialsSection = () => {
             What Our Customers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our satisfied customers
-            have to say about their travel experiences with Arif Tour and
-            Travel.
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied
+            customers have to say about their travel experiences with Arif Tour
+            and Travel.
           </p>
         </div>
 
@@ -101,7 +102,7 @@ const TestimonialsSection = () => {
                     <div className="mb-6">
                       <Quote className="w-12 h-12 text-primary mx-auto mb-4" />
                       <p className="text-lg text-gray-700 italic leading-relaxed">
-                        "{testimonial.text}"
+                        &quot;{testimonial.text}&quot;
                       </p>
                     </div>
 
@@ -115,9 +116,11 @@ const TestimonialsSection = () => {
                     </div>
 
                     <div className="flex items-center justify-center">
-                      <img
+                      <Image
                         src={testimonial.image}
                         alt={testimonial.name}
+                        width={48}
+                        height={48}
                         className="w-12 h-12 rounded-full mr-4 object-cover"
                       />
                       <div className="text-left">

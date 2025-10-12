@@ -12,6 +12,7 @@ import {
   Plane,
   Shield,
 } from "lucide-react";
+import Image from "next/image";
 import { TourPackage } from "../data/packages";
 
 interface PackageDetailsModalProps {
@@ -60,9 +61,11 @@ const PackageDetailsModal = ({
               <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                 {/* Header */}
                 <div className="relative">
-                  <img
+                  <Image
                     src={pkg.image}
                     alt={pkg.name}
+                    width={800}
+                    height={400}
                     className="w-full h-64 object-cover"
                   />
                   <button
@@ -212,7 +215,7 @@ const PackageDetailsModal = ({
                   {/* What's Included */}
                   <div className="mb-6">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      What's Included
+                      What&apos;s Included
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>

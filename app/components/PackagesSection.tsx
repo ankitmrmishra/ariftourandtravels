@@ -4,11 +4,7 @@ import { useState, useMemo } from "react";
 import { Search, Filter, X } from "lucide-react";
 import PackageCard from "./PackageCard";
 import PackageDetailsModal from "./PackageDetailsModal";
-import {
-  TourPackage,
-  domesticPackages,
-  internationalPackages,
-} from "../data/packages";
+import { TourPackage } from "../data/packages";
 
 interface PackagesSectionProps {
   type: "domestic" | "international";
@@ -149,7 +145,7 @@ const PackagesSection = ({ type, title, packages }: PackagesSectionProps) => {
             <div className="mt-4 flex flex-wrap gap-2">
               {searchTerm && (
                 <span className="px-3 py-1 bg-primary text-white rounded-full text-sm">
-                  Search: "{searchTerm}"
+                  Search: &quot;{searchTerm}&quot;
                 </span>
               )}
               {selectedRegion && (

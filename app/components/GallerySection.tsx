@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -159,9 +160,11 @@ const GallerySection = () => {
               className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
               onClick={() => openLightbox(image.src, index)}
             >
-              <img
+              <Image
                 src={image.src}
                 alt={image.alt}
+                width={400}
+                height={400}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
@@ -173,9 +176,11 @@ const GallerySection = () => {
         {selectedImage && (
           <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
             <div className="relative max-w-4xl max-h-full">
-              <img
+              <Image
                 src={selectedImage}
-                alt={filteredImages[selectedIndex]?.alt}
+                alt={filteredImages[selectedIndex]?.alt || "Gallery image"}
+                width={800}
+                height={600}
                 className="max-w-full max-h-full object-contain"
               />
 

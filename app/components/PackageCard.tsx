@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MapPin, Clock, Users, Star, Phone, Eye } from "lucide-react";
+import Image from "next/image";
 import { TourPackage } from "../data/packages";
 
 interface PackageCardProps {
@@ -24,9 +25,11 @@ const PackageCard = ({ package: pkg, onViewDetails }: PackageCardProps) => {
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <img
+        <Image
           src={pkg.image}
           alt={pkg.name}
+          width={400}
+          height={300}
           className={`w-full h-full object-cover transition-transform duration-300 ${
             isHovered ? "scale-110" : "scale-100"
           }`}
