@@ -8,7 +8,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const whatsappUrl =
-    "https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
+    "https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travels,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
 
   const navigation = [
     { name: "Home", href: "#home" },
@@ -27,7 +27,7 @@ const Header = () => {
           <div className="flex-shrink-0">
             <Image
               src={"./logo.svg"}
-              alt="arif tour and travels"
+              alt="arif tour and Travelss"
               width={100}
               height={100}
               className="size-20"

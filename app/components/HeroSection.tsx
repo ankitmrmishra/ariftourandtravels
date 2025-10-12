@@ -10,7 +10,7 @@ import Image3 from "@/public/images/herosection/photo-1506905925346-21bda4d32df4
 const slides = [
   {
     image: Image1,
-    title: "Explore the World with Arif Tour and Travel",
+    title: "Explore the World with Arif Tour and Travels",
     subtitle:
       "Create unforgettable memories with our expertly crafted tour packages",
     location: "Discover Amazing Destinations",
@@ -50,7 +50,7 @@ export default function HeroSection() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   const whatsappUrl =
-    "https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
+    "https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travels,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
 
   if (!isLoaded) return null;
 
@@ -98,7 +98,7 @@ export default function HeroSection() {
       </button>
 
       {/* Foreground Content */}
-      <div className="absolute inset-0 z-50 flex items-center justify-center">
+      <div className="absolute inset-0 z-40 flex items-center justify-center">
         <div className="text-center text-white px-4 max-w-4xl">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 font-heading text-balance">
             {slides[currentSlide].title}

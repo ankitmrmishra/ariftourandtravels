@@ -1,22 +1,22 @@
 const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
-    "@type": "TravelAgency",
-    name: "Arif Tour and Travel",
+    "@type": "TravelsAgency",
+    name: "Arif Tour and Travels",
     description:
       "Professional tour packages for domestic and international destinations",
-    url: "https://ariftourandtravel.com",
-    logo: "https://ariftourandtravel.com/logo.png",
+    url: "https://ariftourandTravels.com",
+    logo: "https://ariftourandTravels.com/logo.png",
     telephone: "+917845818773",
-    email: "salesariftourtravels@gmail.com",
+    email: "salesariftourTravelss@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressCountry: "India",
     },
     sameAs: [
       "https://wa.me/917845818773",
-      "https://www.youtube.com/@ariftourtravels",
-      "https://www.instagram.com/ariftourtravels",
+      "https://www.youtube.com/@ariftourTravelss",
+      "https://www.instagram.com/ariftourTravelss",
     ],
     serviceArea: {
       "@type": "Country",
@@ -50,11 +50,11 @@ const StructuredData = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Arif Tour and Travel",
-    url: "https://ariftourandtravel.com",
+    name: "Arif Tour and Travels",
+    url: "https://ariftourandTravels.com",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://ariftourandtravel.com?search={search_term_string}",
+      target: "https://ariftourandTravels.com?search={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -67,7 +67,7 @@ const StructuredData = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://ariftourandtravel.com",
+        item: "https://ariftourandTravels.com",
       },
     ],
   };

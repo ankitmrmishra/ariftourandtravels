@@ -91,3 +91,33 @@ body {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
 }
+
+@layer utilities {
+  /* add shimmer utility and keyframes */
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .shimmer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Base: transparent, highlight: slight mix with white for subtle sheen */
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      color-mix(in oklch, var(--color-muted), white 16%) 50%,
+      transparent 100%
+    );
+    transform: translateX(-100%);
+    animation: shimmer-move 1.2s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+  @keyframes shimmer-move {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

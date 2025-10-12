@@ -144,7 +144,7 @@ const PackageDetailsModal = ({
                     <div className="bg-blue-50 rounded-lg p-4 mb-6">
                       <h3 className="text-lg font-semibold text-blue-900 mb-3 flex items-center">
                         <Shield className="w-5 h-5 mr-2" />
-                        Travel Requirements
+                        Travels Requirements
                       </h3>
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         {pkg.visaRequired && (
@@ -223,7 +223,7 @@ const PackageDetailsModal = ({
                         </h4>
                         <ul className="text-sm text-gray-600 space-y-1">
                           <li>• Flight tickets</li>
-                          <li>• Travel insurance</li>
+                          <li>• Travels insurance</li>
                           <li>• Personal expenses</li>
                           <li>• Tips and gratuities</li>
                           <li>• Optional activities</li>

@@ -1,6 +1,6 @@
-# Arif Tour and Travel - Professional Travel Website
+# Arif Tour and Travels - Professional Travels Website
 
-A comprehensive, modern travel booking website built with Next.js, TypeScript, and Tailwind CSS. This website provides a complete solution for tour and travel agencies with domestic and international package offerings.
+A comprehensive, modern Travels booking website built with Next.js, TypeScript, and Tailwind CSS. This website provides a complete solution for tour and Travels agencies with domestic and international package offerings.
 
 ## 🚀 Features
 
@@ -82,7 +82,7 @@ A comprehensive, modern travel booking website built with Next.js, TypeScript, a
 
    ```bash
    git clone <repository-url>
-   cd ariftourandtravels
+   cd ariftourandTravelss
    ```
 
 2. **Install dependencies**
@@ -196,12 +196,12 @@ The website can be deployed to any platform that supports Next.js:
 ## 📞 Contact Information
 
 - **WhatsApp**: +91 93053 96179
-- **Email**: info@ariftourandtravel.com
-- **Website**: https://ariftourandtravel.com
+- **Email**: info@ariftourandTravels.com
+- **Website**: https://ariftourandTravels.com
 
 ## 📄 License
 
-This project is proprietary software created for Arif Tour and Travel.
+This project is proprietary software created for Arif Tour and Travels.
 
 ## 🤝 Support
 
@@ -209,4 +209,4 @@ For technical support or customization requests, please contact the development 
 
 ---
 
-**Built with ❤️ for Arif Tour and Travel**
+**Built with ❤️ for Arif Tour and Travels**

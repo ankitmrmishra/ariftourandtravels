@@ -32,13 +32,13 @@ const AboutSection = () => {
       icon: Heart,
       title: "Customizable Packages",
       description:
-        "Tailored itineraries to match your preferences and travel style.",
+        "Tailored itineraries to match your preferences and Travel style.",
     },
     {
       icon: Globe,
       title: "Years of Experience",
       description:
-        "Trusted travel partner with extensive experience in domestic and international tours.",
+        "Trusted Travel partner with extensive experience in domestic and international tours.",
     },
   ];
 
@@ -48,10 +48,10 @@ const AboutSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 font-heading mb-4">
-            Why Choose Arif Tour and Travel?
+            Why Choose Arif Tour and Travels?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are committed to providing exceptional travel experiences with
+            We are committed to providing exceptional Travel experiences with
             professional service, competitive pricing, and personalized
             attention to every detail.
           </p>
@@ -109,12 +109,12 @@ const AboutSection = () => {
         <div className="mt-16 text-center">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 font-heading">
-              About Arif Tour and Travel
+              About Arif Tour and Travels
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Arif Tour and Travel has been your trusted travel companion for
+              Arif Tour and Travels has been your trusted travel companion for
               over a decade, specializing in creating unforgettable domestic and
-              international travel experiences. Our team of travel experts is
+              international Travel experiences. Our team of Travel experts is
               dedicated to providing personalized service, competitive pricing,
               and seamless travel arrangements.
             </p>

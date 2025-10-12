@@ -25,12 +25,12 @@ const FAQSection = () => {
     {
       question: "Can I customize a tour package?",
       answer:
-        "Yes, we offer customizable tour packages to match your preferences, budget, and travel dates. You can modify the itinerary, accommodation, activities, or duration. Our travel experts will work with you to create a personalized experience. Additional charges may apply for customizations.",
+        "Yes, we offer customizable tour packages to match your preferences, budget, and Travels dates. You can modify the itinerary, accommodation, activities, or duration. Our Travels experts will work with you to create a personalized experience. Additional charges may apply for customizations.",
     },
     {
       question: "What documents do I need for international tours?",
       answer:
-        "For international tours, you need a valid passport (minimum 6 months validity), visa (if required), travel insurance, and any destination-specific documents. We provide visa assistance and guidance for required documents. Some countries may require additional documentation like vaccination certificates.",
+        "For international tours, you need a valid passport (minimum 6 months validity), visa (if required), Travels insurance, and any destination-specific documents. We provide visa assistance and guidance for required documents. Some countries may require additional documentation like vaccination certificates.",
     },
     {
       question: "What is the best time to visit different destinations?",
@@ -38,9 +38,9 @@ const FAQSection = () => {
         "The best time varies by destination. For domestic tours: Kerala (October-March), Himachal (April-June, Sept-Nov), Rajasthan (October-March), Goa (November-March). For international: Dubai (November-March), Thailand (November-April), Singapore (year-round), Europe (May-September). We provide detailed seasonal information for each package.",
     },
     {
-      question: "Is travel insurance included?",
+      question: "Is Travel insurance included?",
       answer:
-        "Travel insurance is not included in our packages but is highly recommended, especially for international tours. We can help you arrange comprehensive travel insurance that covers medical emergencies, trip cancellations, and other unforeseen circumstances.",
+        "Travel insurance is not included in our packages but is highly recommended, especially for international tours. We can help you arrange comprehensive Travels insurance that covers medical emergencies, trip cancellations, and other unforeseen circumstances.",
     },
     {
       question: "How much advance booking is required?",
@@ -114,10 +114,10 @@ const FAQSection = () => {
               Still have questions?
             </h3>
             <p className="text-gray-600 mb-6">
-              Our travel experts are here to help you plan your perfect trip.
+              Our Travel experts are here to help you plan your perfect trip.
             </p>
             <a
-              href="https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20have%20some%20questions%20about%20your%20tour%20packages.%20Please%20help%20me."
+              href="https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travels,%20I%20have%20some%20questions%20about%20your%20tour%20packages.%20Please%20help%20me."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center"

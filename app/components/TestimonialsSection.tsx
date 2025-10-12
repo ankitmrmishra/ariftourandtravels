@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
       location: "Delhi",
       destination: "Kerala Backwaters",
       rating: 5,
-      text: "Amazing experience with Arif Tour and Travel! The Kerala backwaters tour was perfectly organized. Our guide was knowledgeable and the houseboat stay was unforgettable. Highly recommended!",
+      text: "Amazing experience with Arif Tour and Travels! The Kerala backwaters tour was perfectly organized. Our guide was knowledgeable and the houseboat stay was unforgettable. Highly recommended!",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
     },
@@ -84,8 +84,8 @@ const TestimonialsSection = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied
-            customers have to say about their travel experiences with Arif Tour
-            and Travel.
+            customers have to say about their Travels experiences with Arif Tour
+            and Travels.
           </p>
         </div>
 

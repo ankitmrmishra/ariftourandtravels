@@ -15,34 +15,34 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Arif Tour and Travel - Your Gateway to Amazing Adventures",
+  title: "Arif Tour and Travels - Your Gateway to Amazing Adventures",
   description:
-    "Explore India and the world with Arif Tour and Travel. Professional tour packages for domestic and international destinations. Best prices guaranteed with 24/7 support.",
+    "Explore India and the world with Arif Tour and Travels. Professional tour packages for domestic and international destinations. Best prices guaranteed with 24/7 support.",
   keywords:
-    "tour packages, travel, domestic tours, international tours, Kerala, Himachal, Rajasthan, Dubai, Thailand, Singapore, Bali, Malaysia, Europe, Turkey",
-  authors: [{ name: "Arif Tour and Travel" }],
-  creator: "Arif Tour and Travel",
-  publisher: "Arif Tour and Travel",
+    "tour packages, Travels, domestic tours, international tours, Kerala, Himachal, Rajasthan, Dubai, Thailand, Singapore, Bali, Malaysia, Europe, Turkey",
+  authors: [{ name: "Arif Tour and Travels" }],
+  creator: "Arif Tour and Travels",
+  publisher: "Arif Tour and Travels",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://ariftourandtravel.com"),
+  metadataBase: new URL("https://ariftourandTravels.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Arif Tour and Travel - Your Gateway to Amazing Adventures",
+    title: "Arif Tour and Travels - Your Gateway to Amazing Adventures",
     description:
       "Professional tour packages for domestic and international destinations",
     type: "website",
     locale: "en_US",
-    siteName: "Arif Tour and Travel",
+    siteName: "Arif Tour and Travels",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arif Tour and Travel - Your Gateway to Amazing Adventures",
+    title: "Arif Tour and Travels - Your Gateway to Amazing Adventures",
     description:
       "Professional tour packages for domestic and international destinations",
   },

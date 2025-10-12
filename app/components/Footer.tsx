@@ -38,7 +38,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold font-heading mb-4">
-              Arif Tour & Travel
+              Arif Tour & Travels
             </h3>
             <p className="text-gray-300 mb-6">
               Your trusted partner for domestic and international travel
@@ -168,7 +168,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Arif Tour and Travel. All rights reserved.
+              © 2024 Arif Tour and Travels. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <a
