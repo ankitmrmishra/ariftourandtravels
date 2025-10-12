@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   const whatsappUrl =
-    "https://wa.me/919305396179?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
+    "https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
 
   const popularDestinations = [
     "Kerala Backwaters",
@@ -47,18 +47,24 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://facebook.com"
+                href="https://www.youtube.com/@ariftourtravels"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 hover:bg-primary p-3 rounded-full transition-colors"
+                className="bg-gray-800 hover:bg-red-600 p-3 rounded-full transition-colors"
               >
-                <Facebook className="w-5 h-5" />
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/ariftourtravels"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-800 hover:bg-primary p-3 rounded-full transition-colors"
+                className="bg-gray-800 hover:bg-pink-600 p-3 rounded-full transition-colors"
               >
                 <Instagram className="w-5 h-5" />
               </a>
@@ -115,26 +121,31 @@ const Footer = () => {
                 <Phone className="w-5 h-5 mr-3 text-primary" />
                 <div>
                   <a
-                    href="tel:+919305396179"
+                    href="tel:+917845818773"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    +91 93053 96179
+                    +91 78458 18773
                   </a>
                 </div>
               </div>
               <div className="flex items-center">
                 <Mail className="w-5 h-5 mr-3 text-primary" />
                 <span className="text-gray-300">
-                  info@ariftourandtravel.com
+                  salesariftourtravels@gmail.com
                 </span>
               </div>
               <div className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 text-primary mt-1" />
-                <span className="text-gray-300">
-                  Travel Office
+                <a
+                  href="https://maps.app.goo.gl/H7BpsTV93B61nv1NA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  View on Google Maps
                   <br />
-                  India
-                </span>
+                  Office Location
+                </a>
               </div>
             </div>
 

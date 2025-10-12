@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { MapPin, Clock, Users, Star, Phone, Eye } from "lucide-react";
-import Image from "next/image";
+import ImageWithLoader from "./ImageWithLoader";
 import { TourPackage } from "../data/packages";
 
 interface PackageCardProps {
@@ -13,7 +13,7 @@ interface PackageCardProps {
 const PackageCard = ({ package: pkg, onViewDetails }: PackageCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const whatsappUrl = `https://wa.me/919305396179?text=Hello,%20I%20am%20interested%20in%20the%20${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/917845818773?text=Hello,%20I%20am%20interested%20in%20the%20${encodeURIComponent(
     pkg.name
   )}%20package.%20Please%20provide%20more%20details.`;
 
@@ -25,7 +25,7 @@ const PackageCard = ({ package: pkg, onViewDetails }: PackageCardProps) => {
     >
       {/* Image */}
       <div className="relative h-48 overflow-hidden">
-        <Image
+        <ImageWithLoader
           src={pkg.image}
           alt={pkg.name}
           width={400}
@@ -45,17 +45,6 @@ const PackageCard = ({ package: pkg, onViewDetails }: PackageCardProps) => {
             {pkg.type === "domestic" ? "Domestic" : "International"}
           </span>
         </div>
-        {pkg.originalPrice && (
-          <div className="absolute top-4 right-4">
-            <span className="bg-red-500 text-white px-2 py-1 rounded text-xs font-medium">
-              Save ₹
-              {(
-                parseInt(pkg.originalPrice.replace(/[^\d]/g, "")) -
-                parseInt(pkg.price.replace(/[^\d]/g, ""))
-              ).toLocaleString()}
-            </span>
-          </div>
-        )}
       </div>
 
       {/* Content */}
@@ -81,21 +70,6 @@ const PackageCard = ({ package: pkg, onViewDetails }: PackageCardProps) => {
               <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
             ))}
             <span className="text-sm text-gray-600 ml-1">(4.8)</span>
-          </div>
-        </div>
-
-        {/* Price */}
-        <div className="mb-4">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold text-primary font-heading">
-              {pkg.price}
-            </span>
-            {pkg.originalPrice && (
-              <span className="text-lg text-gray-500 line-through ml-2">
-                {pkg.originalPrice}
-              </span>
-            )}
-            <span className="text-sm text-gray-600 ml-2">per person</span>
           </div>
         </div>
 

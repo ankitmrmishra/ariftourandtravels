@@ -2,17 +2,18 @@
 
 import { useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import Image from "next/image";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const whatsappUrl =
-    "https://wa.me/919305396179?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
+    "https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
 
   const navigation = [
     { name: "Home", href: "#home" },
-    { name: "Domestic Packages", href: "#domestic" },
     { name: "International Packages", href: "#international" },
+    { name: "Domestic Packages", href: "#domestic" },
     { name: "Gallery", href: "#gallery" },
     { name: "About Us", href: "#about" },
     { name: "Contact", href: "#contact" },
@@ -24,9 +25,13 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-primary font-heading">
-              Arif Tour & Travel
-            </h1>
+            <Image
+              src={"./logo.svg"}
+              alt="arif tour and travels"
+              width={100}
+              height={100}
+              className="size-20"
+            />
           </div>
 
           {/* Desktop Navigation */}

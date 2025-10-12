@@ -16,14 +16,14 @@ export default function Home() {
       <main>
         <HeroSection />
         <PackagesSection
-          type="domestic"
-          title="Explore India"
-          packages={domesticPackages}
-        />
-        <PackagesSection
           type="international"
           title="Explore the World"
           packages={internationalPackages}
+        />
+        <PackagesSection
+          type="domestic"
+          title="Explore India"
+          packages={domesticPackages}
         />
         <AboutSection />
         <GallerySection />

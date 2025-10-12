@@ -12,7 +12,7 @@ import {
   Plane,
   Shield,
 } from "lucide-react";
-import Image from "next/image";
+import ImageWithLoader from "./ImageWithLoader";
 import { TourPackage } from "../data/packages";
 
 interface PackageDetailsModalProps {
@@ -28,7 +28,7 @@ const PackageDetailsModal = ({
 }: PackageDetailsModalProps) => {
   if (!pkg) return null;
 
-  const whatsappUrl = `https://wa.me/919305396179?text=Hello,%20I%20am%20interested%20in%20the%20${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/917845818773?text=Hello,%20I%20am%20interested%20in%20the%20${encodeURIComponent(
     pkg.name
   )}%20package.%20Please%20provide%20more%20details.`;
 
@@ -61,7 +61,7 @@ const PackageDetailsModal = ({
               <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                 {/* Header */}
                 <div className="relative">
-                  <Image
+                  <ImageWithLoader
                     src={pkg.image}
                     alt={pkg.name}
                     width={800}
@@ -100,22 +100,9 @@ const PackageDetailsModal = ({
                     <span className="text-lg">{pkg.destination}</span>
                   </div>
 
-                  {/* Price Section */}
+                  {/* Rating Section */}
                   <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <div className="flex items-center">
-                          <span className="text-3xl font-bold text-primary font-heading">
-                            {pkg.price}
-                          </span>
-                          {pkg.originalPrice && (
-                            <span className="text-xl text-gray-500 line-through ml-3">
-                              {pkg.originalPrice}
-                            </span>
-                          )}
-                        </div>
-                        <p className="text-gray-600">per person</p>
-                      </div>
+                    <div className="flex items-center justify-center">
                       <div className="flex items-center">
                         {[...Array(5)].map((_, i) => (
                           <Star

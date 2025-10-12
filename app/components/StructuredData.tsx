@@ -7,13 +7,17 @@ const StructuredData = () => {
       "Professional tour packages for domestic and international destinations",
     url: "https://ariftourandtravel.com",
     logo: "https://ariftourandtravel.com/logo.png",
-    telephone: "+919305396179",
-    email: "info@ariftourandtravel.com",
+    telephone: "+917845818773",
+    email: "salesariftourtravels@gmail.com",
     address: {
       "@type": "PostalAddress",
       addressCountry: "India",
     },
-    sameAs: ["https://wa.me/919305396179"],
+    sameAs: [
+      "https://wa.me/917845818773",
+      "https://www.youtube.com/@ariftourtravels",
+      "https://www.instagram.com/ariftourtravels",
+    ],
     serviceArea: {
       "@type": "Country",
       name: "India",

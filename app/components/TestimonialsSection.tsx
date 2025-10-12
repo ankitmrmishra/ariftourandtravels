@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
-import Image from "next/image";
+import ImageWithLoader from "./ImageWithLoader";
 
 const TestimonialsSection = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -116,7 +116,7 @@ const TestimonialsSection = () => {
                     </div>
 
                     <div className="flex items-center justify-center">
-                      <Image
+                      <ImageWithLoader
                         src={testimonial.image}
                         alt={testimonial.name}
                         width={48}

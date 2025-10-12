@@ -45,7 +45,7 @@ Message: ${formData.message}
 
 Please provide more information about suitable packages.`;
 
-    const whatsappUrl = `https://wa.me/919305396179?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/917845818773?text=${encodeURIComponent(
       message
     )}`;
     window.open(whatsappUrl, "_blank");
@@ -55,25 +55,25 @@ Please provide more information about suitable packages.`;
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 93053 96179",
-      link: "tel:+919305396179",
+      details: "+91 78458 18773",
+      link: "tel:+917845818773",
     },
     {
       icon: Mail,
       title: "Email",
-      details: "info@ariftourandtravel.com",
-      link: "mailto:info@ariftourandtravel.com",
+      details: "salesariftourtravels@gmail.com",
+      link: "mailto:salesariftourtravels@gmail.com",
     },
     {
       icon: MapPin,
       title: "Address",
-      details: "Travel Office, India",
-      link: "#",
+      details: "View on Google Maps",
+      link: "https://maps.app.goo.gl/H7BpsTV93B61nv1NA",
     },
     {
       icon: Clock,
       title: "Office Hours",
-      details: "Mon-Sat: 9:00 AM - 7:00 PM",
+      details: "Mon - Sat: 09:30 AM - 07:00 PM",
       link: "#",
     },
   ];
@@ -135,7 +135,7 @@ Please provide more information about suitable packages.`;
                 assistance.
               </p>
               <a
-                href="https://wa.me/919305396179?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages."
+                href="https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg inline-flex items-center transition-colors"

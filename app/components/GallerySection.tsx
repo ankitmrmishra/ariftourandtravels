@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import Image from "next/image";
+import ImageWithLoader from "./ImageWithLoader";
 
 const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -160,7 +160,7 @@ const GallerySection = () => {
               className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
               onClick={() => openLightbox(image.src, index)}
             >
-              <Image
+              <ImageWithLoader
                 src={image.src}
                 alt={image.alt}
                 width={400}
@@ -176,7 +176,7 @@ const GallerySection = () => {
         {selectedImage && (
           <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
             <div className="relative max-w-4xl max-h-full">
-              <Image
+              <ImageWithLoader
                 src={selectedImage}
                 alt={filteredImages[selectedIndex]?.alt || "Gallery image"}
                 width={800}

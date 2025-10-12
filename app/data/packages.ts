@@ -3,8 +3,6 @@ export interface TourPackage {
   name: string;
   destination: string;
   duration: string;
-  price: string;
-  originalPrice?: string;
   image: string;
   highlights: string[];
   meals: string;
@@ -25,10 +23,7 @@ export const domesticPackages: TourPackage[] = [
     name: "Kerala Backwaters & Munnar",
     destination: "Kerala",
     duration: "5 Days / 4 Nights",
-    price: "₹15,999",
-    originalPrice: "₹18,999",
-    image:
-      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/domesticpackages/kerala.jpg",
     highlights: [
       "Houseboat stay in backwaters",
       "Tea plantation tour in Munnar",
@@ -48,10 +43,7 @@ export const domesticPackages: TourPackage[] = [
     name: "Himachal Pradesh Adventure",
     destination: "Manali & Shimla",
     duration: "6 Days / 5 Nights",
-    price: "₹18,999",
-    originalPrice: "₹22,999",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/domesticpackages/himachalpradesh.jpg",
     highlights: [
       "Rohtang Pass excursion",
       "Solang Valley adventure sports",
@@ -67,37 +59,11 @@ export const domesticPackages: TourPackage[] = [
     region: "North",
   },
   {
-    id: "rajasthan-1",
-    name: "Rajasthan Royal Tour",
-    destination: "Jaipur, Udaipur, Jodhpur",
-    duration: "7 Days / 6 Nights",
-    price: "₹24,999",
-    originalPrice: "₹28,999",
-    image:
-      "https://images.unsplash.com/photo-1564507592333-c60657eea523?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    highlights: [
-      "Amber Fort with elephant ride",
-      "City Palace Udaipur",
-      "Mehrangarh Fort Jodhpur",
-      "Desert safari in Jaisalmer",
-      "Cultural dance performances",
-    ],
-    meals: "All meals included",
-    transport: "AC Coach",
-    accommodation: "4-Star Heritage Hotels",
-    type: "domestic",
-    bestTime: "October to March",
-    region: "West",
-  },
-  {
     id: "goa-1",
     name: "Goa Beach Retreat",
     destination: "North & South Goa",
     duration: "4 Days / 3 Nights",
-    price: "₹12,999",
-    originalPrice: "₹15,999",
-    image:
-      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/domesticpackages/goa.jpg",
     highlights: [
       "Baga & Calangute beaches",
       "Old Goa churches",
@@ -117,10 +83,7 @@ export const domesticPackages: TourPackage[] = [
     name: "Kashmir Valley Paradise",
     destination: "Srinagar, Gulmarg, Pahalgam",
     duration: "6 Days / 5 Nights",
-    price: "₹22,999",
-    originalPrice: "₹26,999",
-    image:
-      "https://images.unsplash.com/photo-1544966503-7cc2ac0a2b4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/domesticpackages/kashmir.jpg",
     highlights: [
       "Shikara ride on Dal Lake",
       "Gulmarg gondola ride",
@@ -136,37 +99,11 @@ export const domesticPackages: TourPackage[] = [
     region: "North",
   },
   {
-    id: "mysore-1",
-    name: "Mysore & Bangalore City Tour",
-    destination: "Mysore, Bangalore",
-    duration: "4 Days / 3 Nights",
-    price: "₹11,999",
-    originalPrice: "₹14,999",
-    image:
-      "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    highlights: [
-      "Mysore Palace illumination",
-      "Chamundi Hills temple",
-      "Bangalore Palace tour",
-      "Lalbagh Botanical Garden",
-      "Silk saree shopping",
-    ],
-    meals: "Breakfast & Dinner",
-    transport: "AC Coach",
-    accommodation: "3-Star Hotels",
-    type: "domestic",
-    bestTime: "October to March",
-    region: "South",
-  },
-  {
     id: "darjeeling-1",
     name: "Darjeeling Tea Gardens",
     destination: "Darjeeling, Kalimpong",
     duration: "5 Days / 4 Nights",
-    price: "₹16,999",
-    originalPrice: "₹19,999",
-    image:
-      "https://images.unsplash.com/photo-1571115764595-644a1f56a55c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/domesticpackages/darjeeling.jpg",
     highlights: [
       "Tiger Hill sunrise view",
       "Tea plantation tour",
@@ -186,10 +123,7 @@ export const domesticPackages: TourPackage[] = [
     name: "Manali Adventure",
     destination: "Manali, Kasol, Tosh",
     duration: "5 Days / 4 Nights",
-    price: "₹17,999",
-    originalPrice: "₹20,999",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/domesticpackages/manali.jpg",
     highlights: [
       "Paragliding in Solang Valley",
       "Kasol hippie culture",
@@ -204,52 +138,6 @@ export const domesticPackages: TourPackage[] = [
     bestTime: "April to June, September to November",
     region: "North",
   },
-  {
-    id: "golden-triangle-1",
-    name: "Golden Triangle Tour",
-    destination: "Delhi, Agra, Jaipur",
-    duration: "5 Days / 4 Nights",
-    price: "₹19,999",
-    originalPrice: "₹23,999",
-    image:
-      "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    highlights: [
-      "Taj Mahal at sunrise",
-      "Red Fort Delhi",
-      "Amber Fort Jaipur",
-      "Fatehpur Sikri",
-      "Local handicraft shopping",
-    ],
-    meals: "All meals included",
-    transport: "AC Coach",
-    accommodation: "4-Star Hotels",
-    type: "domestic",
-    bestTime: "October to March",
-    region: "North",
-  },
-  {
-    id: "ooty-1",
-    name: "Ooty & Kodaikanal Hill Stations",
-    destination: "Ooty, Kodaikanal",
-    duration: "5 Days / 4 Nights",
-    price: "₹14,999",
-    originalPrice: "₹17,999",
-    image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
-    highlights: [
-      "Nilgiri Mountain Railway",
-      "Kodaikanal Lake boating",
-      "Tea plantation tour",
-      "Botanical Gardens",
-      "Coaker's Walk viewpoint",
-    ],
-    meals: "All meals included",
-    transport: "AC Coach",
-    accommodation: "3-Star Hotels",
-    type: "domestic",
-    bestTime: "April to June, September to November",
-    region: "South",
-  },
 ];
 
 export const internationalPackages: TourPackage[] = [
@@ -258,10 +146,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Dubai & Abu Dhabi Luxury",
     destination: "Dubai, Abu Dhabi",
     duration: "5 Days / 4 Nights",
-    price: "₹45,999",
-    originalPrice: "₹52,999",
-    image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/dubai.jpg",
     highlights: [
       "Burj Khalifa observation deck",
       "Desert safari with BBQ dinner",
@@ -284,10 +169,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Bangkok-Pattaya Beach Bliss",
     destination: "Bangkok, Pattaya",
     duration: "6 Days / 5 Nights",
-    price: "₹32,999",
-    originalPrice: "₹38,999",
-    image:
-      "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/bangkok.jpg",
     highlights: [
       "Grand Palace & Wat Pho",
       "Pattaya beach activities",
@@ -310,10 +192,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Singapore City Tour",
     destination: "Singapore",
     duration: "4 Days / 3 Nights",
-    price: "₹38,999",
-    originalPrice: "₹44,999",
-    image:
-      "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/singapore.jpg",
     highlights: [
       "Marina Bay Sands",
       "Gardens by the Bay",
@@ -336,10 +215,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Bali Island Paradise",
     destination: "Bali",
     duration: "5 Days / 4 Nights",
-    price: "₹35,999",
-    originalPrice: "₹41,999",
-    image:
-      "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/bali.jpg",
     highlights: [
       "Ubud rice terraces",
       "Tanah Lot temple",
@@ -362,10 +238,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Malaysia Highlights",
     destination: "Kuala Lumpur, Langkawi",
     duration: "6 Days / 5 Nights",
-    price: "₹29,999",
-    originalPrice: "₹34,999",
-    image:
-      "https://images.unsplash.com/photo-1535025639604-9a804c092faa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/malaysia.jpg",
     highlights: [
       "Petronas Twin Towers",
       "Langkawi cable car",
@@ -388,10 +261,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Indonesia Discovery",
     destination: "Jakarta, Yogyakarta",
     duration: "7 Days / 6 Nights",
-    price: "₹33,999",
-    originalPrice: "₹39,999",
-    image:
-      "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/indonesia.jpg",
     highlights: [
       "Borobudur temple",
       "Prambanan temple",
@@ -414,10 +284,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Europe Grand Tour",
     destination: "Paris, Amsterdam, Zurich",
     duration: "10 Days / 9 Nights",
-    price: "₹89,999",
-    originalPrice: "₹99,999",
-    image:
-      "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/europe.jpg",
     highlights: [
       "Eiffel Tower Paris",
       "Amsterdam canal cruise",
@@ -440,10 +307,7 @@ export const internationalPackages: TourPackage[] = [
     name: "Turkey Historical Journey",
     destination: "Istanbul, Cappadocia",
     duration: "8 Days / 7 Nights",
-    price: "₹65,999",
-    originalPrice: "₹72,999",
-    image:
-      "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+    image: "/images/internationalPackage/turkey.jpg",
     highlights: [
       "Hagia Sophia",
       "Blue Mosque",

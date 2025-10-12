@@ -50,7 +50,7 @@ export default function HeroSection() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   const whatsappUrl =
-    "https://wa.me/919305396179?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
+    "https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20would%20like%20to%20inquire%20about%20your%20tour%20packages.";
 
   if (!isLoaded) return null;
 

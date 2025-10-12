@@ -10,7 +10,7 @@ const FAQSection = () => {
     {
       question: "How do I book a tour package?",
       answer:
-        "You can book a tour package by contacting us via WhatsApp at +91 93053 96179 or by filling out our inquiry form. We will provide you with detailed information about the package, pricing, and booking process. You can also visit our office for in-person consultation.",
+        "You can book a tour package by contacting us via WhatsApp at +91 78458 18773 or by filling out our inquiry form. We will provide you with detailed information about the package and booking process. You can also visit our office for in-person consultation.",
     },
     {
       question: "What is the cancellation policy?",
@@ -117,7 +117,7 @@ const FAQSection = () => {
               Our travel experts are here to help you plan your perfect trip.
             </p>
             <a
-              href="https://wa.me/919305396179?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20have%20some%20questions%20about%20your%20tour%20packages.%20Please%20help%20me."
+              href="https://wa.me/917845818773?text=Hello%20Arif%20Tour%20and%20Travel,%20I%20have%20some%20questions%20about%20your%20tour%20packages.%20Please%20help%20me."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary inline-flex items-center"
