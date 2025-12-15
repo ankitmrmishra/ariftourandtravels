@@ -5,8 +5,8 @@ const StructuredData = () => {
     name: "Arif Tour and Travels",
     description:
       "Professional tour packages for domestic and international destinations",
-    url: "https://ariftourandTravels.com",
-    logo: "https://ariftourandTravels.com/logo.png",
+    url: "https://www.clholidays.com",
+    logo: "https://www.clholidays.com/logo.png",
     telephone: "+917845818773",
     email: "salesariftourTravelss@gmail.com",
     address: {
@@ -51,10 +51,10 @@ const StructuredData = () => {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "Arif Tour and Travels",
-    url: "https://ariftourandTravels.com",
+    url: "https://www.clholidays.com",
     potentialAction: {
       "@type": "SearchAction",
-      target: "https://ariftourandTravels.com?search={search_term_string}",
+      target: "https://www.clholidays.com?search={search_term_string}",
       "query-input": "required name=search_term_string",
     },
   };
@@ -67,7 +67,7 @@ const StructuredData = () => {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://ariftourandTravels.com",
+        item: "https://www.clholidays.com",
       },
     ],
   };

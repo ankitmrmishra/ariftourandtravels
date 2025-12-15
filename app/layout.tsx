@@ -16,7 +16,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Arif Tour and Travels - Best National & International Tour Packages",
+    default: "Arif Tour and Travels",
     template: "%s | Arif Tour and Travels",
   },
   description:
@@ -49,7 +49,9 @@ export const metadata: Metadata = {
     "international travel agency",
     "best tour operator",
   ],
-  authors: [{ name: "Arif Tour and Travels", url: "https://ariftourandtravels.com" }],
+  authors: [
+    { name: "Arif Tour and Travels", url: "https://www.clholidays.com" },
+  ],
   creator: "Arif Tour and Travels",
   publisher: "Arif Tour and Travels",
   applicationName: "Arif Tour and Travels",
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://ariftourandtravels.com"),
+  metadataBase: new URL("https://www.clholidays.com"),
   alternates: {
     canonical: "/",
     languages: {
@@ -68,16 +70,17 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Arif Tour and Travels - Best National & International Tour Packages",
+    title:
+      "Arif Tour and Travels - Best National & International Tour Packages",
     description:
       "Discover unforgettable travel experiences with expert-curated domestic and international tour packages. Best prices, 24/7 support, customized itineraries for Kerala, Dubai, Thailand, Singapore, Bali, Europe & more.",
-    url: "https://ariftourandtravels.com",
+    url: "https://www.clholidays.com",
     siteName: "Arif Tour and Travels",
     type: "website",
     locale: "en_US",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Arif Tour and Travels - National & International Tour Packages",
@@ -86,12 +89,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arif Tour and Travels - Best National & International Tour Packages",
+    title:
+      "Arif Tour and Travels - Best National & International Tour Packages",
     description:
       "Discover unforgettable travel experiences with expert-curated domestic and international tour packages. Best prices, 24/7 support, customized itineraries.",
-    images: ["/twitter-image"],
-    creator: "@ariftourandtravels",
-    site: "@ariftourandtravels",
+    images: ["/twitter-image.jpg"],
+    creator: "@ariftourTravelss",
+    site: "@ariftourTravelss",
   },
   robots: {
     index: true,
@@ -116,8 +120,8 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "IN",
     "geo.placename": "India",
-    "og:phone_number": "+91-XXXXXXXXXX",
-    "og:email": "info@ariftourandtravels.com",
+    "og:phone_number": "+917845818773",
+    "og:email": "salesariftourTravelss@gmail.com",
     "og:latitude": "28.6139",
     "og:longitude": "77.2090",
   },
@@ -133,81 +137,79 @@ export default function RootLayout({
     "@graph": [
       {
         "@type": "TravelAgency",
-        "@id": "https://ariftourandtravels.com/#organization",
+        "@id": "https://www.clholidays.com/#organization",
         name: "Arif Tour and Travels",
-        url: "https://ariftourandtravels.com",
+        url: "https://www.clholidays.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://ariftourandtravels.com/logo.svg",
+          url: "https://www.clholidays.com/logo.svg",
           width: 250,
           height: 60,
         },
-        image: "https://ariftourandtravels.com/opengraph-image",
+        image: "https://www.clholidays.com/opengraph-image.jpg",
         description:
           "Leading travel agency offering domestic and international tour packages with best prices and 24/7 support.",
-        telephone: "+91-XXXXXXXXXX",
-        email: "info@ariftourandtravels.com",
+        telephone: "+917845818773",
+        email: "salesariftourTravelss@gmail.com",
         address: {
           "@type": "PostalAddress",
           addressCountry: "IN",
-          addressLocality: "Your City",
-          addressRegion: "Your State",
+          addressLocality: "India",
         },
         sameAs: [
-          "https://www.facebook.com/ariftourandtravels",
-          "https://www.instagram.com/ariftourandtravels",
-          "https://twitter.com/ariftourandtravels",
-          "https://www.linkedin.com/company/ariftourandtravels",
+          "https://wa.me/917845818773",
+          "https://www.youtube.com/@ariftourTravelss",
+          "https://www.instagram.com/ariftourTravelss",
         ],
         priceRange: "₹₹",
         areaServed: ["India", "International"],
       },
       {
         "@type": "WebSite",
-        "@id": "https://ariftourandtravels.com/#website",
-        url: "https://ariftourandtravels.com",
+        "@id": "https://www.clholidays.com/#website",
+        url: "https://www.clholidays.com",
         name: "Arif Tour and Travels",
         description:
           "Best national and international tour packages with customized itineraries",
         publisher: {
-          "@id": "https://ariftourandtravels.com/#organization",
+          "@id": "https://www.clholidays.com/#organization",
         },
         potentialAction: {
           "@type": "SearchAction",
           target: {
             "@type": "EntryPoint",
             urlTemplate:
-              "https://ariftourandtravels.com/search?q={search_term_string}",
+              "https://www.clholidays.com/search?q={search_term_string}",
           },
           "query-input": "required name=search_term_string",
         },
       },
       {
         "@type": "WebPage",
-        "@id": "https://ariftourandtravels.com/#webpage",
-        url: "https://ariftourandtravels.com",
+        "@id": "https://www.clholidays.com/#webpage",
+        url: "https://www.clholidays.com",
         name: "Arif Tour and Travels - Best National & International Tour Packages",
         isPartOf: {
-          "@id": "https://ariftourandtravels.com/#website",
+          "@id": "https://www.clholidays.com/#website",
         },
         about: {
-          "@id": "https://ariftourandtravels.com/#organization",
+          "@id": "https://www.clholidays.com/#organization",
         },
         description:
           "Discover unforgettable travel experiences with expert-curated domestic and international tour packages.",
         breadcrumb: {
-          "@id": "https://ariftourandtravels.com/#breadcrumb",
+          "@id": "https://www.clholidays.com/#breadcrumb",
         },
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://ariftourandtravels.com/#breadcrumb",
+        "@id": "https://www.clholidays.com/#breadcrumb",
         itemListElement: [
           {
             "@type": "ListItem",
             position: 1,
             name: "Home",
-            item: "https://ariftourandtravels.com",
+            item: "https://www.clholidays.com",
           },
         ],
       },
@@ -223,7 +225,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </head>
       <body className={`${inter.variable} ${poppins.variable} antialiased`}>
