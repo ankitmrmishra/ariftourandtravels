@@ -10,7 +10,7 @@ import Image3 from "@/public/images/herosection/photo-1506905925346-21bda4d32df4
 const slides = [
   {
     image: Image1,
-    title: "Explore the World with Arif Tour and Travels",
+    title: "Explore the World with Country Link Holidays",
     subtitle:
       "Create unforgettable memories with our expertly crafted tour packages",
     location: "Discover Amazing Destinations",

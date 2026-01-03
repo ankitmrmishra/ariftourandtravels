@@ -61,8 +61,8 @@ Please provide more information about suitable packages.`;
     {
       icon: Mail,
       title: "Email",
-      details: "salesariftourtravels@gmail.com",
-      link: "mailto:salesariftourtravels@gmail.com",
+      details: "info@clholidays.com",
+      link: "mailto:info@clholidays.com",
     },
     {
       icon: MapPin,

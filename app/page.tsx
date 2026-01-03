@@ -11,9 +11,9 @@ import { domesticPackages, internationalPackages } from "./data/packages";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <Header />
-      <main>
+      <main className="flex justify-center align-middle items-center flex-col">
         <HeroSection />
         <PackagesSection
           type="international"

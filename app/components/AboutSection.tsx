@@ -48,7 +48,7 @@ const AboutSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 font-heading mb-4">
-            Why Choose Arif Tour and Travels?
+            Why Choose Country Link Holidays?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We are committed to providing exceptional Travel experiences with
@@ -109,10 +109,10 @@ const AboutSection = () => {
         <div className="mt-16 text-center">
           <div className="max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 font-heading">
-              About Arif Tour and Travels
+              About Country Link Holidays
             </h3>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              Arif Tour and Travels has been your trusted travel companion for
+              Country Link Holidays has been your trusted travel companion for
               over a decade, specializing in creating unforgettable domestic and
               international Travel experiences. Our team of Travel experts is
               dedicated to providing personalized service, competitive pricing,

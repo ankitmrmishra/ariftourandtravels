@@ -16,11 +16,11 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Arif Tour and Travels",
-    template: "%s | Arif Tour and Travels",
+    default: "Country Link Holidays",
+    template: "%s | Country Link Holidays",
   },
   description:
-    "Discover unforgettable travel experiences with Arif Tour and Travels. Expert-curated domestic and international tour packages to Kerala, Himachal, Rajasthan, Dubai, Thailand, Singapore, Bali, Malaysia, Europe & more. Best prices, 24/7 support, customized itineraries.",
+    "Discover unforgettable travel experiences with Country Link Holidays. Expert-curated domestic and international tour packages to Kerala, Himachal, Rajasthan, Dubai, Thailand, Singapore, Bali, Malaysia, Europe & more. Best prices, 24/7 support, customized itineraries.",
   keywords: [
     "tour packages India",
     "international tour packages",
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
     "best tour operator",
   ],
   authors: [
-    { name: "Arif Tour and Travels", url: "https://www.clholidays.com" },
+    { name: "Country Link Holidays", url: "https://www.clholidays.com" },
   ],
-  creator: "Arif Tour and Travels",
-  publisher: "Arif Tour and Travels",
-  applicationName: "Arif Tour and Travels",
+  creator: "Country Link Holidays",
+  publisher: "Country Link Holidays",
+  applicationName: "Country Link Holidays",
   category: "Travel & Tourism",
   classification: "Travel Agency",
   formatDetection: {
@@ -71,11 +71,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Arif Tour and Travels - Best National & International Tour Packages",
+      "Country Link Holidays - Best National & International Tour Packages",
     description:
       "Discover unforgettable travel experiences with expert-curated domestic and international tour packages. Best prices, 24/7 support, customized itineraries for Kerala, Dubai, Thailand, Singapore, Bali, Europe & more.",
     url: "https://www.clholidays.com",
-    siteName: "Arif Tour and Travels",
+    siteName: "Country Link Holidays",
     type: "website",
     locale: "en_US",
     images: [
@@ -83,14 +83,14 @@ export const metadata: Metadata = {
         url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Arif Tour and Travels - National & International Tour Packages",
+        alt: "Country Link Holidays - National & International Tour Packages",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "Arif Tour and Travels - Best National & International Tour Packages",
+      "Country Link Holidays - Best National & International Tour Packages",
     description:
       "Discover unforgettable travel experiences with expert-curated domestic and international tour packages. Best prices, 24/7 support, customized itineraries.",
     images: ["/twitter-image.jpg"],
@@ -138,11 +138,11 @@ export default function RootLayout({
       {
         "@type": "TravelAgency",
         "@id": "https://www.clholidays.com/#organization",
-        name: "Arif Tour and Travels",
+        name: "Country Link Holidays",
         url: "https://www.clholidays.com",
         logo: {
           "@type": "ImageObject",
-          url: "https://www.clholidays.com/logo.svg",
+          url: "https://www.clholidays.com/logo.jpeg",
           width: 250,
           height: 60,
         },
@@ -158,8 +158,8 @@ export default function RootLayout({
         },
         sameAs: [
           "https://wa.me/917845818773",
-          "https://www.youtube.com/@ariftourTravelss",
-          "https://www.instagram.com/ariftourTravelss",
+          "https://youtube.com/@clholidays",
+          "https://www.instagram.com/clholidays",
         ],
         priceRange: "₹₹",
         areaServed: ["India", "International"],
@@ -168,7 +168,7 @@ export default function RootLayout({
         "@type": "WebSite",
         "@id": "https://www.clholidays.com/#website",
         url: "https://www.clholidays.com",
-        name: "Arif Tour and Travels",
+        name: "Country Link Holidays",
         description:
           "Best national and international tour packages with customized itineraries",
         publisher: {
@@ -188,7 +188,7 @@ export default function RootLayout({
         "@type": "WebPage",
         "@id": "https://www.clholidays.com/#webpage",
         url: "https://www.clholidays.com",
-        name: "Arif Tour and Travels - Best National & International Tour Packages",
+        name: "Country Link Holidays - Best National & International Tour Packages",
         isPartOf: {
           "@id": "https://www.clholidays.com/#website",
         },

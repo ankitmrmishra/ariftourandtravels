@@ -26,8 +26,8 @@ const Header = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Image
-              src={"./logo.svg"}
-              alt="arif tour and Travelss"
+              src={"/logo.jpeg"}
+              alt="Country Link Holidayss"
               width={100}
               height={100}
               className="size-20"

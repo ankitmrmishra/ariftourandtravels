@@ -2,7 +2,7 @@ const StructuredData = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "TravelsAgency",
-    name: "Arif Tour and Travels",
+    name: "Country Link Holidays",
     description:
       "Professional tour packages for domestic and international destinations",
     url: "https://www.clholidays.com",
@@ -50,7 +50,7 @@ const StructuredData = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Arif Tour and Travels",
+    name: "Country Link Holidays",
     url: "https://www.clholidays.com",
     potentialAction: {
       "@type": "SearchAction",

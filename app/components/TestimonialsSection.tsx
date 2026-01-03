@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
       location: "Delhi",
       destination: "Kerala Backwaters",
       rating: 5,
-      text: "Amazing experience with Arif Tour and Travels! The Kerala backwaters tour was perfectly organized. Our guide was knowledgeable and the houseboat stay was unforgettable. Highly recommended!",
+      text: "Amazing experience with Country Link Holidays! The Kerala backwaters tour was perfectly organized. Our guide was knowledgeable and the houseboat stay was unforgettable. Highly recommended!",
       image:
         "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80",
     },
@@ -75,36 +75,41 @@ const TestimonialsSection = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-14 sm:py-16 bg-gray-50 overflow-x-hidden  max-w-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 font-heading mb-4">
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 font-heading mb-4">
             What Our Customers Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base  sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Don&apos;t just take our word for it. Here&apos;s what our satisfied
-            customers have to say about their Travels experiences with Arif Tour
+            customers have to say about their travel experiences with Arif Tour
             and Travels.
           </p>
         </div>
 
-        {/* Testimonials Carousel */}
+        {/* Carousel */}
         <div className="relative max-w-4xl mx-auto">
           <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+              style={{
+                transform: `translateX(-${currentTestimonial * 100}%)`,
+              }}
             >
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="w-full flex-shrink-0 px-4">
-                  <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
-                    <div className="mb-6">
-                      <Quote className="w-12 h-12 text-primary mx-auto mb-4" />
-                      <p className="text-lg text-gray-700 italic leading-relaxed">
-                        &quot;{testimonial.text}&quot;
-                      </p>
-                    </div>
+                <div
+                  key={index}
+                  className="flex-shrink-0 px-2 sm:px-4"
+                  style={{ width: "100%" }}
+                >
+                  <div className="bg-white rounded-2xl shadow-lg p-5 sm:p-8 text-center">
+                    <Quote className="w-10 h-10 sm:w-12 sm:h-12 text-primary mx-auto mb-4" />
+
+                    <p className="text-base sm:text-lg text-gray-700 italic leading-relaxed mb-6">
+                      &quot;{testimonial.text}&quot;
+                    </p>
 
                     <div className="flex justify-center mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
@@ -115,15 +120,8 @@ const TestimonialsSection = () => {
                       ))}
                     </div>
 
-                    <div className="flex items-center justify-center">
-                      <ImageWithLoader
-                        src={testimonial.image}
-                        alt={testimonial.name}
-                        width={48}
-                        height={48}
-                        className="w-12 h-12 rounded-full mr-4 object-cover"
-                      />
-                      <div className="text-left">
+                    <div className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left">
+                      <div>
                         <h4 className="font-semibold text-gray-900">
                           {testimonial.name}
                         </h4>
@@ -141,23 +139,24 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* Navigation Buttons */}
+          {/* Navigation Buttons (desktop only) */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors"
+            className="hidden sm:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition"
           >
             <ChevronLeft className="w-6 h-6 text-gray-600" />
           </button>
+
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition-colors"
+            className="hidden sm:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white shadow-lg rounded-full p-3 hover:bg-gray-50 transition"
           >
             <ChevronRight className="w-6 h-6 text-gray-600" />
           </button>
         </div>
 
-        {/* Dots Indicator */}
-        <div className="flex justify-center mt-8 space-x-2">
+        {/* Dots */}
+        <div className="flex justify-center mt-6 sm:mt-8 space-x-2">
           {testimonials.map((_, index) => (
             <button
               key={index}
@@ -170,18 +169,20 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Overall Rating */}
-        <div className="text-center mt-12">
-          <div className="inline-flex items-center bg-white rounded-lg shadow-lg px-8 py-4">
+        <div className="text-center mt-10 sm:mt-12">
+          <div className="inline-flex items-center bg-white rounded-lg shadow-lg px-6 sm:px-8 py-4">
             <div className="flex items-center mr-4">
               {[...Array(5)].map((_, i) => (
                 <Star
                   key={i}
-                  className="w-6 h-6 text-yellow-400 fill-current"
+                  className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 fill-current"
                 />
               ))}
             </div>
             <div className="text-left">
-              <div className="text-2xl font-bold text-gray-900">4.9/5</div>
+              <div className="text-xl sm:text-2xl font-bold text-gray-900">
+                4.9/5
+              </div>
               <div className="text-sm text-gray-600">Based on 500+ reviews</div>
             </div>
           </div>

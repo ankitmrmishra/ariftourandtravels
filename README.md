@@ -1,4 +1,4 @@
-# Arif Tour and Travels - Professional Travels Website
+# Country Link Holidays - Professional Travels Website
 
 A comprehensive, modern Travels booking website built with Next.js, TypeScript, and Tailwind CSS. This website provides a complete solution for tour and Travels agencies with domestic and international package offerings.
 
@@ -201,7 +201,7 @@ The website can be deployed to any platform that supports Next.js:
 
 ## 📄 License
 
-This project is proprietary software created for Arif Tour and Travels.
+This project is proprietary software created for Country Link Holidays.
 
 ## 🤝 Support
 
@@ -209,4 +209,4 @@ For technical support or customization requests, please contact the development 
 
 ---
 
-**Built with ❤️ for Arif Tour and Travels**
+**Built with ❤️ for Country Link Holidays**

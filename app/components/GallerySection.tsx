@@ -1,9 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-// Types
+/* -------------------- Types -------------------- */
 type Category = "all" | "domestic" | "international";
 
 type GalleryImage = {
@@ -13,7 +14,7 @@ type GalleryImage = {
   description: string;
 };
 
-// Mock data with descriptions
+/* -------------------- Data -------------------- */
 const GALLERY_IMAGES: GalleryImage[] = [
   {
     src: "/images/domesticpackages/kerala.jpg",
@@ -97,21 +98,18 @@ const GALLERY_IMAGES: GalleryImage[] = [
   },
 ];
 
+/* -------------------- Component -------------------- */
 export default function GallerySection() {
   const [category, setCategory] = useState<Category>("all");
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const images = useMemo(
-    () =>
-      category === "all"
-        ? GALLERY_IMAGES
-        : GALLERY_IMAGES.filter((i) => i.category === category),
-    [category]
-  );
+  const images = useMemo(() => {
+    return category === "all"
+      ? GALLERY_IMAGES
+      : GALLERY_IMAGES.filter((i) => i.category === category);
+  }, [category]);
 
-  const openLightbox = (idx: number) => setOpenIndex(idx);
-  const closeLightbox = () => setOpenIndex(null);
-
+  /* ---------- Lightbox Navigation ---------- */
   const goPrev = () => {
     if (openIndex === null) return;
     setOpenIndex((openIndex - 1 + images.length) % images.length);
@@ -122,171 +120,144 @@ export default function GallerySection() {
     setOpenIndex((openIndex + 1) % images.length);
   };
 
-  // Keyboard navigation for the lightbox
   useEffect(() => {
     if (openIndex === null) return;
+
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeLightbox();
+      if (e.key === "Escape") setOpenIndex(null);
       if (e.key === "ArrowLeft") goPrev();
       if (e.key === "ArrowRight") goNext();
     };
+
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [openIndex, images.length]);
 
   return (
-    <section id="gallery" className="py-16 bg-background text-foreground">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-10">
-          <h2 className="text-4xl font-bold font-sans text-balance">
-            Travel Gallery
-          </h2>
-          <p className="mt-3 text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Discover stunning destinations around the world. Hover to see
-            details, click to explore in full view.
-          </p>
-        </div>
-
-        {/* Category Filter */}
-        <div className="flex justify-center mb-8">
-          <div className="inline-flex items-center gap-1 rounded-lg bg-muted p-1">
-            {(["all", "domestic", "international"] as Category[]).map((c) => {
-              const active = category === c;
-              return (
-                <button
-                  key={c}
-                  onClick={() => setCategory(c)}
-                  className={[
-                    "px-4 py-2 rounded-md transition-colors font-medium",
-                    active
-                      ? "bg-background text-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground",
-                  ].join(" ")}
-                  aria-pressed={active}
-                >
-                  {c === "all" ? "All Photos" : c[0].toUpperCase() + c.slice(1)}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* 3-Column Grid - Uniform sizes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {images.map((img, i) => {
-            return (
-              <button
-                key={img.src + i}
-                type="button"
-                onClick={() => openLightbox(i)}
-                className={[
-                  "group relative overflow-hidden rounded-xl bg-muted",
-                  "focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background",
-                  "h-64 md:h-72 lg:h-80", // Uniform height across all sizes
-                ].join(" ")}
-                aria-label={`Open image: ${img.alt}`}
-              >
-                {/* Image - fill the container */}
-                <img
-                  src={img.src || "/placeholder.svg"}
-                  alt={img.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  loading="lazy"
-                />
-
-                {/* Black opacity overlay on hover - appears at bottom */}
-                <div
-                  className={[
-                    "absolute bottom-0 left-0 right-0",
-                    "bg-gradient-to-t from-black/80 via-black/40 to-transparent",
-                    "h-40 pointer-events-none",
-                    "translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100",
-                    "transition-all duration-300",
-                  ].join(" ")}
-                />
-
-                {/* Info text on bottom - appears with overlay */}
-                <div
-                  className={[
-                    "absolute bottom-0 left-0 right-0",
-                    "p-4 text-white pointer-events-none",
-                    "translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100",
-                    "transition-all duration-300",
-                  ].join(" ")}
-                >
-                  <p className="font-bold text-sm md:text-base line-clamp-1">
-                    {img.alt}
-                  </p>
-                  <p className="text-xs md:text-sm line-clamp-2 mt-1 text-gray-200">
-                    {img.description}
-                  </p>
-                </div>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Lightbox */}
-        {openIndex !== null && images[openIndex] && (
-          <div
-            className="fixed inset-0 z-50 bg-foreground/90 flex items-center justify-center p-4"
-            role="dialog"
-            aria-modal="true"
-          >
-            <div className="relative w-full max-w-5xl max-h-[85vh]">
-              {/* Image in contain mode */}
-              <div className="relative w-full h-[60vh] md:h-[75vh] bg-background rounded-xl overflow-hidden flex items-center justify-center">
-                <img
-                  src={images[openIndex].src || "/placeholder.svg"}
-                  alt={images[openIndex].alt}
-                  className="max-w-full max-h-full object-contain"
-                />
-              </div>
-
-              {/* Info bar */}
-              <div className="mt-4 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
-                <div className="rounded-md bg-card/80 text-card-foreground backdrop-blur-sm border border-border px-4 py-3">
-                  <p className="text-base font-semibold">
-                    {images[openIndex].alt}
-                  </p>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {images[openIndex].description}
-                  </p>
-                  <p className="text-xs text-muted-foreground mt-2">
-                    {openIndex + 1} of {images.length} —{" "}
-                    {images[openIndex].category}
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={goPrev}
-                    className="inline-flex items-center justify-center rounded-full w-10 h-10 bg-card/80 text-card-foreground border border-border hover:bg-card transition-colors"
-                    aria-label="Previous image"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={goNext}
-                    className="inline-flex items-center justify-center rounded-full w-10 h-10 bg-card/80 text-card-foreground border border-border hover:bg-card transition-colors"
-                    aria-label="Next image"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={closeLightbox}
-                    className="inline-flex items-center justify-center rounded-full w-10 h-10 bg-destructive/20 text-primary-foreground hover:bg-destructive/30 transition-colors"
-                    aria-label="Close lightbox"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
+    <section className="space-y-8 md:min-w-5xl">
+      {/* Header */}
+      <div className="text-center space-y-2">
+        <h2 className="text-3xl font-bold">Travel Gallery</h2>
+        <p className="text-muted-foreground">
+          Discover stunning destinations around the world. Hover to see details,
+          click to explore.
+        </p>
       </div>
+
+      {/* Filters */}
+      <div className="flex justify-center gap-3">
+        {(["all", "domestic", "international"] as Category[]).map((c) => {
+          const active = category === c;
+          return (
+            <button
+              key={c}
+              onClick={() => setCategory(c)}
+              className={[
+                "px-4 py-2 rounded-md text-sm font-medium transition",
+                active
+                  ? "bg-background text-foreground shadow"
+                  : "text-muted-foreground hover:text-foreground",
+              ].join(" ")}
+            >
+              {c === "all" ? "All Photos" : c[0].toUpperCase() + c.slice(1)}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {images.map((img, i) => (
+          <GalleryCard
+            key={img.src}
+            image={img}
+            onClick={() => setOpenIndex(i)}
+          />
+        ))}
+      </div>
+
+      {/* Lightbox */}
+      {openIndex !== null && images[openIndex] && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center">
+          <button
+            onClick={() => setOpenIndex(null)}
+            className="absolute top-4 right-4 text-white"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          <button onClick={goPrev} className="absolute left-4 text-white">
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+
+          <button onClick={goNext} className="absolute right-4 text-white">
+            <ChevronRight className="w-8 h-8" />
+          </button>
+
+          <div className="relative w-full max-w-5xl aspect-[16/10]">
+            <Image
+              src={images[openIndex].src}
+              alt={images[openIndex].alt}
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
+
+          <div className="absolute bottom-6 text-center text-white space-y-1">
+            <p className="font-semibold">{images[openIndex].alt}</p>
+            <p className="text-sm opacity-80">
+              {images[openIndex].description}
+            </p>
+            <p className="text-xs opacity-60">
+              {openIndex + 1} of {images.length} — {images[openIndex].category}
+            </p>
+          </div>
+        </div>
+      )}
     </section>
+  );
+}
+
+/* -------------------- Gallery Card -------------------- */
+function GalleryCard({
+  image,
+  onClick,
+}: {
+  image: GalleryImage;
+  onClick: () => void;
+}) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <button
+      onClick={onClick}
+      className="group relative h-72 rounded-xl overflow-hidden bg-muted focus:outline-none"
+    >
+      {/* Skeleton */}
+      {!loaded && (
+        <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-muted via-muted/50 to-muted" />
+      )}
+
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        sizes="(max-width: 1024px) 100vw, 33vw"
+        className={[
+          "object-cover transition-opacity duration-500",
+          loaded ? "opacity-100" : "opacity-0",
+        ].join(" ")}
+        onLoad={() => setLoaded(true)}
+      />
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition" />
+
+      <div className="absolute bottom-0 p-4 text-left text-white opacity-0 group-hover:opacity-100 transition">
+        <p className="font-semibold">{image.alt}</p>
+        <p className="text-sm opacity-80">{image.description}</p>
+      </div>
+    </button>
   );
 }
